@@ -7,4 +7,6 @@ import com.example.employeemanagement.model.Employee;
 
 public interface EmployeeService {
 	public List<Employee> getEmployees() throws BusinessServiceException;
+	
+	public Employee getEmployee(Integer employeeId) throws BusinessServiceException;
 }

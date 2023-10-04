@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.example.employeemanagement.exceptions.DataServiceException;
 import com.example.employeemanagement.model.Employee;
+
 @Component
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
@@ -20,6 +21,16 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 			employees.add(employee2);
 			employees.add(employee3);
 			return employees;
+		} catch (Exception e) {
+			throw new DataServiceException(e.getMessage(), e);
+		}
+	}
+
+	@Override
+	public Employee getEmployee(Integer employeeId) throws DataServiceException {
+		try {
+			Employee employee = new Employee(employeeId, "A", 100, new Date(10));			
+			return employee;
 		} catch (Exception e) {
 			throw new DataServiceException(e.getMessage(), e);
 		}

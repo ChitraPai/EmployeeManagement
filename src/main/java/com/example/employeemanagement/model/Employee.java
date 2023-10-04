@@ -16,6 +16,10 @@ public class Employee {
 		this.dateofjoining = dateofjoining;
 	}
 
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getId() {
 		return id;
 	}

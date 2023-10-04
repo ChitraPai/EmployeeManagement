@@ -7,5 +7,7 @@ import com.example.employeemanagement.model.Employee;
 
 public interface EmployeeRepository {
 	public List<Employee> getEmployees() throws DataServiceException;
+	
+	public Employee getEmployee(Integer employeeId) throws DataServiceException;
 
 }
